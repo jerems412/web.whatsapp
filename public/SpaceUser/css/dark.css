@@ -1,0 +1,968 @@
+body {
+    padding: 0;
+    margin:0;
+    background: #222e35;
+    font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+}
+
+html {
+    padding:0;
+    margin:0;
+}
+
+.container {
+    top: 0;
+    padding:0;
+    display: flex;
+}
+
+.container .left {
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    float: left;
+    background: #111b21;
+    border-right: 0.2px solid #374045;
+}
+
+.container .right {
+    top: 0;
+    width: 70%;
+    height: 100vh;
+    float: right;
+    background: #0b141a;
+}
+
+.container .left .top {
+    width: 100%;
+    display: flex;
+    height: 9vh;
+    background: #202c33;
+    align-items: center;
+}
+
+.container .left .top .leftTop {
+    width: 10%;
+    padding-left: 3px;
+}
+
+.container .left .top .rightTop {
+    width: 100%;
+    justify-content: right;
+    padding-right: 10%;
+    display: flex;
+}
+
+.container .left .top img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.container .left .top img:hover{
+    cursor: pointer;
+}
+
+.container .left .top i {
+    margin-left: 10%;
+    color: #aebac1;
+    font-size: 19px;
+}
+
+.container .left .top i:hover {
+    cursor: pointer;
+}
+
+.container .left .search {
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #374045;
+}
+
+.container .left .search .inputSearch {
+    display: flex;
+    width: 90%;
+    height: 3.5vh;
+    align-items: center;
+    background: #202c33;
+    padding: 7px;
+    border-radius: 8px;
+    padding-left: 12px;
+    color: #aebac1;
+}
+
+.container .left .search .inputSearch input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #aebac1;
+    padding-left: 20px; 
+}
+
+.container .left .discussion {
+    display: block;
+    width: 100%;
+    height: 82%;
+    padding: 2px 5px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .left .discussion::-webkit-scrollbar {
+    display: none;
+}
+
+.container .left .discussion a {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    padding-left: 20px;
+    border-top: 1px solid #374045;
+}
+
+.container .left .discussion a:hover {
+    background: #202c33;
+    cursor: pointer;
+}
+
+.container .left .discussion a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.container .left .discussion a ul {
+    list-style: none;
+}
+
+.container .left .discussion a ul li {
+    color: #aebac1;
+    font-size: 14.5px;
+}
+
+/*Menu*/
+
+.container .left .menu,.container .right .menu {
+    position: absolute;
+    background: #233138;
+    display: grid;
+    padding: 20px 1px;
+    color: #aebac1;
+}
+
+.container .left .menu a,.container .right .menu a {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    color: #aebac1;
+}
+
+.container .left .menu a:hover,.container .right .menu a:hover {
+    background: black;
+    cursor: pointer;
+}
+
+/*add Friends*/
+
+.container .left .topAddFriends {
+    width: 100%;
+    display: flex;
+    height: 15vh;
+    background: #202c33;
+    align-items: center;
+    color: #aebac1;
+}
+
+.container .left .topAddFriends i:hover {
+    cursor: pointer;
+}
+
+.container .left .searchAddFriends {
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #374045;
+}
+
+.container .left .searchAddFriends .inputSearch {
+    display: flex;
+    width: 90%;
+    height: 3vh;
+    align-items: center;
+    background: #202c33;
+    padding: 7px;
+    border-radius: 8px;
+    padding-left: 12px;
+    color: #aebac1;
+}
+
+.container .left .searchAddFriends .inputSearch input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #aebac1;
+    padding-left: 20px; 
+}
+
+.container .left .discussionAddFriends {
+    display: block;
+    width: 100%;
+    height: 75%;
+    padding: 2px 5px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .left .discussionAddFriends::-webkit-scrollbar {
+    display: none;
+}
+
+.container .left .discussionAddFriends a {
+    display: flex;
+    height: 10vh;
+    height: 9vh;
+    align-items: center;
+    padding-left: 20px;
+    border-top: 1px solid #374045;
+}
+
+.container .left .discussionAddFriends a:hover {
+    background: #202c33;
+    cursor: pointer;
+}
+
+.container .left .discussionAddFriends a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.container .left .discussionAddFriends a ul {
+    list-style: none;
+}
+
+.container .left .discussionAddFriends a ul li {
+    color: #aebac1;
+    font-size: 14.5px;
+}
+
+/*messages importants*/
+
+.container .left .topImportantMessage {
+    width: 100%;
+    display: flex;
+    height: 15vh;
+    background: #202c33;
+    align-items: center;
+    color: #aebac1;
+}
+
+.container .left .topImportantMessage i:hover {
+    cursor: pointer;
+}
+
+.container .left .discussionImportantMessage {
+    display: block;
+    width: 100%;
+    height: 84%;
+    padding: 2px 5px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .left .discussionImportantMessage::-webkit-scrollbar {
+    display: none;
+}
+
+.container .left .discussionImportantMessage .part1 {
+    display: block;
+    width: 100%;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.container .left .discussionImportantMessage .part1:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.container .left .discussionImportantMessage .part1 div {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    text-align: left;
+}
+
+.container .left .discussionImportantMessage .part1 div  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    margin-left: 5%;
+    justify-content: left;
+}
+
+.container .left .discussionImportantMessage .part1 div  p {
+    font-size: 14px;
+    color: #aebac1;
+    margin-left: 2%;
+}
+
+.sendIM {
+    background: #005c4b;
+    width: 90%;
+    max-width: 100%;
+    color: whitesmoke;
+    font-size: 14.2px;
+    padding: 0.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.receiveIM {
+    background: #202c33;
+    width: 90%;
+    max-width: 100%;
+    color: whitesmoke;
+    font-size: 14.2px;
+    padding: 0.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.sendIM:hover,.receiveIM:hover {
+    cursor: pointer;
+}
+
+.sendIM span,.receiveIM span {
+    float: right;
+    font-size: 11px;
+}
+
+/*parametress*/
+
+.container .left .topParametres {
+    width: 100%;
+    display: flex;
+    height: 15vh;
+    background: #202c33;
+    align-items: center;
+    color: #aebac1;
+}
+
+.container .left .topParametres i:hover {
+    cursor: pointer;
+}
+
+.container .left .discussionParametres {
+    display: grid;
+    height: 69.5%;
+    padding: 2px 5px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .left .discussionParametres::-webkit-scrollbar {
+    display: none;
+}
+
+.container .left .discussionParametres a {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid #374045;
+}
+
+.container .left .discussionParametres a:hover {
+    background: #202c33;
+    cursor: pointer;
+}
+
+.container .left .discussionParametres a  ul {
+    list-style: none;
+    margin-left: 1%;
+}
+
+.container .left .discussionParametres i {
+    color: #aebac1;
+    font-size: 20px;
+}
+
+.container .left .discussionParametres a ul li {
+    color:white;
+}
+
+.container .left .searchParametres {
+    width: 100%;
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: left;
+}
+
+.container .left .searchParametres:hover {
+    cursor: pointer;
+    background: #202c33;
+}
+
+.container .left .searchParametres img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-left: 4%;
+}
+
+.container .left .searchParametres ul {
+    list-style: none;
+    margin-left: -2%;
+}
+
+.container .left .searchParametres ul li {
+    color: #aebac1;
+}
+
+/*right*/
+
+.container .right .top {
+    width: 100%;
+    display: flex;
+    height: 9vh;
+    background: #202c33;
+    align-items: center;
+}
+
+.container .right .top .leftTop {
+    display: flex;
+    width: 10%;
+    padding-left: 2%;
+    align-items: center;
+}
+
+.container .right .top .leftTop ul {
+    list-style: none;
+    margin-left: -10%;
+}
+
+.container .right .top .leftTop ul li {
+    color: #aebac1;
+}
+
+.container .right .top .rightTop {
+    width: 100%;
+    justify-content: right;
+    padding-right: 5%;
+    display: flex;
+}
+
+.container .right .top .leftTop img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.container .right .top .leftTop img:hover {
+    cursor: pointer;
+}
+
+.container .right .top i {
+    margin-left: 5%;
+    color: #aebac1;
+}
+
+.container .right .top i:hover {
+    cursor: pointer;
+}
+
+.container .right .bottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    background: #202c33;
+    align-items: center; 
+}
+
+.container .right .bottom input {
+    display: flex;
+    width: 55%;
+    height: 6vh;
+    font-size: 15px;
+    align-items: center;
+    background: #2a3942;
+    border-radius: 8px;
+    padding-left: 12px;
+    color: whitesmoke;
+    outline: none;
+    border:0;
+}
+
+.container .right .bottom i {
+    color: #aebac1;
+    font-size: 28px;
+    margin: 0 2% 0 2%;
+}
+
+.container .right .bottom i:hover {
+    cursor: pointer;
+}
+
+.container .right .messages {
+    width: 100%;
+    height: 75%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 6%;
+    padding-top: 3%;
+}
+
+.container .right .messages::-webkit-scrollbar {
+    display: none;
+}
+
+.send {
+    background: #005c4b;
+    width: 50%;
+    max-width: 50%;
+    color: whitesmoke;
+    font-size: 14.2px;
+    padding: 0.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10%;
+    text-align: left;
+    float: right;
+}
+
+.receive {
+    background: #202c33;
+    width: 50%;
+    max-width: 50%;
+    color: whitesmoke;
+    font-size: 14.2px;
+    padding: 0.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10%;
+    text-align: left;
+    float: left;
+}
+
+.send:hover,.receive:hover {
+    cursor: pointer;
+}
+
+.send span,.receive span {
+    float: right;
+    font-size: 11px;
+}
+
+/* infos contact */
+
+.container .infosContact {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background: #0c1317;
+    border-right: 0.2px solid #374045;
+    margin-left: 70%;
+    border-left: 1px solid #374045;
+
+}
+
+.container .infosContact .topinfosContact {
+    width: 100%;
+    display: flex;
+    height: 9vh;
+    background: #202c33;
+    align-items: center;
+    color: #aebac1;
+}
+
+.container .infosContact .topinfosContact i:hover {
+    cursor: pointer;
+}
+
+.container .infosContact .contentIC {
+    width: 100%;
+    height: 85%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .infosContact .part1 {
+    display: grid;
+    background: #111b21;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.container .infosContact .part1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-top: 10%;
+}
+
+.container .infosContact .part1 ul {
+    list-style: none;
+}
+
+.container .infosContact .part1 ul li {
+    color: #aebac1;
+    margin-top: 1%;
+}
+
+.container .infosContact .part2 {
+    background: #111b21;
+    width: 100%;
+    height: 11vh;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.container .infosContact .part2 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part2 ul li {
+    color: #aebac1;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+.container .infosContact .part3 {
+    background: #111b21;
+    width: 100%;
+    height: 11vh;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.container .infosContact .part3 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part3 ul li {
+    color: #aebac1;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+.container .infosContact .part4 {
+    background: #111b21;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.container .infosContact .part4 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part4 ul li {
+    color: #aebac1;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+.container .infosContact .part5 {
+    background: #111b21;
+    width: 100%;
+    height: 12vh;
+    align-items: center;
+    margin-top: -6%;
+}
+
+.container .infosContact .part5 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part5 ul li {
+    color: #aebac1;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+.container .infosContact .part6 {
+    background: #111b21;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    margin-top: -6%;
+}
+
+.container .infosContact .part6:hover {
+    cursor: pointer;
+}
+
+.container .infosContact .part6 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part6 ul li {
+    color: #f15c6d;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+.container .infosContact .part7 {
+    background: #111b21;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.container .infosContact .part7:hover {
+    cursor: pointer;
+}
+
+.container .infosContact .part7 ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .infosContact .part7 ul li {
+    color: #f15c6d;
+    margin-top: 1%;
+    font-size: 13px;
+}
+
+/* search important message */
+
+.container .searchMessageIC {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background: #0c1317;
+    border-right: 0.2px solid #374045;
+    margin-left: 70%;
+    border-left: 1px solid #374045;
+
+}
+
+.container .searchMessageIC .topSearchMessageIC {
+    width: 100%;
+    display: flex;
+    height: 9vh;
+    background: #202c33;
+    align-items: center;
+    color: #aebac1;
+}
+
+.container .searchMessageIC .topSearchMessageIC i:hover {
+    cursor: pointer;
+}
+
+.container .searchMessageIC .searchIC {
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #374045;
+}
+
+.container .searchMessageIC .searchIC .inputSearchIC {
+    display: flex;
+    width: 90%;
+    height: 3.5vh;
+    align-items: center;
+    background: #202c33;
+    padding: 7px;
+    border-radius: 8px;
+    padding-left: 12px;
+    color: #aebac1;
+}
+
+.container .searchMessageIC .searchIC .inputSearchIC input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #aebac1;
+    padding-left: 20px; 
+}
+
+.container .searchMessageIC .discussionSearchIC {
+    display: block;
+    height: 83%;
+    padding: 2px 5px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container .searchMessageIC .discussionSearchIC::-webkit-scrollbar {
+    display: none;
+}
+
+.container .searchMessageIC .discussionSearchIC a {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    padding-left: 20px;
+    border-top: 1px solid #374045;
+}
+
+.container .searchMessageIC .discussionSearchIC a:hover {
+    background: #202c33;
+    cursor: pointer;
+}
+
+.container .searchMessageIC .discussionSearchIC a  ul {
+    list-style: none;
+    margin-left: 1%;
+}
+
+.container .searchMessageIC .discussionSearchIC i {
+    color: #aebac1;
+    font-size: 20px;
+}
+
+.container .searchMessageIC .discussionSearchIC a ul li {
+    color: #aebac1;
+}
+
+/*emoji*/
+
+.full-width {
+    position: absolute;
+    display: flex;
+    
+    .justify-content-center {
+      display: flex;
+      align-self: center;
+      width: 100%;
+    }
+    .lead.emoji-picker-container {
+      width: 300px;
+      display: block;
+      input {
+        width: 100%;
+        height: 50px;
+      }
+    }
+}
+
+.emojis{
+    position: absolute;
+    background: #202c33;
+    margin-top: -15%;
+    width: 69.8%;
+    height: 20vh;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    transition: .5s ease-out;
+}
+
+.emojis::-webkit-scrollbar {
+    display: none;
+}
+
+.emojis button:hover{
+    cursor: pointer;
+}
+
+.emojis button {
+    background: transparent;
+    outline: none;
+    border: 0;
+    width: 30px;
+    font-size: 30px;
+}
+
+/* no read*/
+
+.noRead {
+    color: white;
+    background: #00a884;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/*edit name and actu*/
+
+.discussion1Profil input,.discussion2Profil input {
+    outline: none;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    color: #aebac1;
+    font-size: 15px;
+    margin-top: 5%;
+}
+
+.discussion1Profil,.discussion2Profil {
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    padding-left: 5%;
+    margin-top: 10%;
+}
+
+.discussion1Profil i,.discussion2Profil i {
+    color: #aebac1;
+    font-size: 20px;
+}
+
+.searchProfil {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.discussion1Profil label {
+    font-size: 13px;
+    color: #00a884;
+}
+
+.searchProfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-top: 5%;
+}
+
+.searchProfil input {
+    outline: none;
+    background: transparent;
+    color: transparent;
+}
+
+
